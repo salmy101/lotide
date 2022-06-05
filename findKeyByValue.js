@@ -20,15 +20,15 @@ const bestTVShowsByGenre = {
 
 const findKeyByValue = function(object,value) {
   for(const key in object) {
-    // console.log(key);
     if(object[key] === value)
     return key;
-  }
+    } 
+    return undefined
 } 
 
 
 
-findKeyByValue(bestTVShowsByGenre, "The Wire")
+console.log(findKeyByValue(bestTVShowsByGenre, "Big Comfy Couch"))
 
 
 
