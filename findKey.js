@@ -1,33 +1,24 @@
 
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ ✅ ✅ Assertion Passed:[${actual}] === [${expected}]`);
-  } if (actual !== expected) {
-    console.log(`🛑 🛑 🛑 Assertion Failed:[${actual}] !== [${expected}]`);
-  }
-};
+// const assertEqual = function (actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅ ✅ ✅ Assertion Passed:[${actual}] === [${expected}]`);
+//   } if (actual !== expected) {
+//     console.log(`🛑 🛑 🛑 Assertion Failed:[${actual}] !== [${expected}]`);
+//   }
+// };
 
-  
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire",
-  fantasy: "Merlin",
-  children: "Big Comfy Couch"
-};
-
-
-const findKeyByValue = function(object,value) {
-  for(const key in object) {
-    // console.log(key);
-    if(object[key] === value)
+const findKey  = function(obj,callback) {
+  for(const key of Object.keys(obj)) {
+    if(callback(obj[key]))
     return key;
-  }
-} 
+    } 
+}  
 
-
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "comedy");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Big Comfy Couch"), "sci_fi");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Merlin"), "fantasy");
+console.log(findKey({
+  "Blue Hill": { stars: 1 },
+  "Akaleri":   { stars: 3 },
+  "noma":      { stars: 2 },
+  "elBulli":   { stars: 3 },
+  "Ora":       { stars: 2 },
+  "Akelarre":  { stars: 3 }
+}, x => x.stars === 1))
