@@ -6,8 +6,10 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-assertEqual(4,4);
-assertEqual(4,3);
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Bootcamp", "Bootcamp"); 
-assertEqual("salma", "ibrahim")
+
+
+module.exports = assertEqual;
+
+/*Notice how we are passing the variable assertEqual (which points to our function) 
+and not calling assertEqual via assertEqual() here. This is an important distinction.*/
+
