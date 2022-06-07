@@ -1,13 +1,4 @@
-// const letterPositions = function(sentence) {
-//   const results = {};
-//   for(const i in sentence)
-//   if(results[sentence[i]]){
-//     results[sentence[i]] = i
-//     console.log(i)
 
-//   }
-//   return results;
-// };
 
 const letterPositions = function(string){
   const results = {}
@@ -31,4 +22,6 @@ const letterPositions = function(string){
 
 
 
-console.log(letterPositions("Salma is"));
+// console.log(letterPositions("Salma is")); 
+
+module.exports = letterPositions;

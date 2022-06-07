@@ -14,8 +14,6 @@ let middle = function(arr){
       
     }
           
-console.log(middle([1])); 
-console.log(middle([1,2])); 
-console.log(middle([1,2,3]));  
-console.log(middle([55,3,45,8,12])); 
-console.log(middle([1,2,3,4])); 
+
+
+module.exports = middle;
